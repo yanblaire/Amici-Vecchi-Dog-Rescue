@@ -6,10 +6,14 @@
     font-family: "BodoniMOda-Italic";
     src: url("Assets/Fonts/BodoniModa/BodoniModa-VariableFont_opsz\,wght.ttf");
 }
+
+/* Colors that are used throughout the website using the 60%, 30%, 10% rule */
 :root{
     --color60: #F6D4BA;
     --color30: #F3B391;
     --color10: #FEFADC;
+
+    --buttonColor: #FF4D6D
 }
 
 body{
@@ -19,19 +23,184 @@ body{
     background-color: var(--color60);
 }
 
+/* style for main content */
 main{
     display: flex;
     justify-content: center;
     align-content: center;
 }
 
+/* This is the style for section 1 with the flipping image and description */
 .section1{
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 
-    width: 70vw;
-    height: 30vh;
+    gap: 1rem;
+
+    width: 90vw;
+    height: 50vh;
 
     background-color: var(--color30);
 }
+
+/* style for the picture section that flips when hovered over it */
+.pictureSection{
+    position: relative;
+
+    width: 48%;
+    height: 94%;
+
+    overflow: hidden;
+
+    background-image: url("Assets/Images/dogs/pb\ Winnie\ male\ 8yrs.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    animation: changingPictures 30s infinite ease-out;
+}
+
+/* animation keyframe for changing pictures animation */
+@keyframes changingPictures {
+    0%{
+        background-image: url("Assets/Images/dogs/pb\ Winnie\ male\ 8yrs.jpg");
+    }
+
+    25%{
+        background-image: url("Assets/Images/dogs/pb\ Wonder\ female\ 11yrs.jpg");
+        background-position-y: center;
+    }
+
+    50%{
+        background-image: url("Assets/Images/dogs/Snowball\ female\ 8yrs.jpg");
+        background-position-y: center;
+    }
+
+    75%{
+        background-image: url("Assets/Images/dogs/pb\ Waffles\ female\ 10yrs.jpg");
+        background-position-y: -10rem;
+    }
+
+    100%{
+        background-image: url("Assets/Images/dogs/pb\ Winnie\ male\ 8yrs.jpg");
+    }
+}
+
+/* style for the description section for the image flip section */
+.descriptionSection{
+    display: flex;
+    justify-content: center;
+    text-align: start;
+    flex-direction: column;
+
+    width: 48%;
+    height: 94%;
+
+    color: var(--color10);
+
+    border: 5px solid var(--color60);
+    background-color: var(--color30);
+}
+
+h2{
+    font-family: "BodoniMOda-Italic";
+}
+
+/* style for paragraph and learn more button for description section */
+.paragraph, .learnMore, .descriptionButtons{
+    padding: 2rem;
+}
+
+.descriptionButtons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.glowButton{
+    position: relative;
+
+    width: 6rem;
+    height: 2rem;
+
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
+
+    border-style: none;
+    border-radius: 0.5rem;
+    transition: 0.5s;
+}
+
+.glowButton:hover{
+    width: 6.5rem;
+    /* height: 2.5rem; */
+
+    letter-spacing: 0.25rem;
+    background: var(--buttonColor);
+    box-shadow: 0 0 35px var(--buttonColor);
+    color: var(--color10);
+}
+
+.glowButton:nth-child(1):before{
+    content: "";
+    position: absolute;
+
+    top: -15px;
+    left: 100%;
+    transform: translateX(-50%);
+
+    width: 30px;
+    height: 30px;
+
+    background-image: url("Assets/Images/dogs/puppyIcon.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    transition: 0.5s;
+}
+
+.glowButton:hover:nth-child(1):before{
+    left: 0%;
+    transform: translateX(-50%) rotate(360deg);
+}
+
+.glowButton:nth-child(2):before{
+    content: "";
+    position: absolute;
+
+    top: -15px;
+    left: 100%;
+    transform: translateX(-50%);
+
+    width: 30px;
+    height: 30px;
+
+    background-image: url("Assets/Images/dogs/puppy2Icon.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    transition: 0.5s;
+}
+
+.glowButton:nth-child(3):before{
+    content: "";
+    position: absolute;
+
+    top: -15px;
+    left: 100%;
+    transform: translateX(-50%);
+
+    width: 30px;
+    height: 30px;
+
+    background-image: url("Assets/Images/dogs/puppy3Icon.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    transition: 0.5s;
+}
+
