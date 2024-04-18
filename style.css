@@ -142,7 +142,7 @@ h2{
     color: var(--color10);
 }
 
-.glowButton:nth-child(1):before{
+.glowButton:nth-child(1)::before{
     content: "";
     position: absolute;
 
@@ -158,15 +158,53 @@ h2{
     background-repeat: no-repeat;
     background-size: contain;
 
+    background-color: rgb(239, 239, 239);
+    border-radius: 50%;
+
     transition: 0.5s;
 }
 
-.glowButton:hover:nth-child(1):before{
+.glowButton:hover:nth-child(1)::before{
     left: 0%;
+    background-image: url("Assets/Images/dogs/personIcon.png");
     transform: translateX(-50%) rotate(360deg);
+    border-radius: 50%;
+    background-color: var(--buttonColor);
 }
 
-.glowButton:nth-child(2):before{
+.glowButton:nth-child(1)::after{
+    content: "";
+    position: absolute;
+
+    bottom: -15px;
+    left: 0%;
+    transform: translateX(-50%);
+
+    width: 30px;
+    height: 30px;
+
+    background-image: url("Assets/Images/dogs/houseIcon.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    background-color: rgb(239, 239, 239);
+    border-radius: 50%;
+
+
+
+    transition: 0.5s;
+}
+
+.glowButton:hover:nth-child(1)::after{
+    left: 100%;
+    background-image: url("Assets/Images/dogs/puppyIcon.png");
+    transform: translateX(-50%) rotate(360deg);
+    border-radius: 50%;
+    background-color: var(--buttonColor);
+}
+
+.glowButton:nth-child(2)::before{
     content: "";
     position: absolute;
 
@@ -182,10 +220,53 @@ h2{
     background-repeat: no-repeat;
     background-size: contain;
 
+    background-color: rgb(239, 239, 239);
+    border-radius: 50%;
+
+
     transition: 0.5s;
 }
 
-.glowButton:nth-child(3):before{
+.glowButton:hover:nth-child(2)::before{
+    left: 0%;
+    background-image: url("Assets/Images/dogs/person2Icon.png");
+    transform: translateX(-50%) rotate(360deg);
+    border-radius: 50%;
+    background-color: var(--buttonColor);
+}
+
+.glowButton:nth-child(2)::after{
+    content: "";
+    position: absolute;
+
+    bottom: -15px;
+    left: 0%;
+    transform: translateX(-50%);
+
+    width: 30px;
+    height: 30px;
+
+    background-image: url("Assets/Images/dogs/house2Icon.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    background-color: rgb(239, 239, 239);
+    border-radius: 50%;
+
+
+    transition: 0.5s;
+}
+
+.glowButton:hover:nth-child(2)::after{
+    left: 100%;
+    background-image: url("Assets/Images/dogs/puppy2Icon.png");
+    transform: translateX(-50%) rotate(360deg);
+    border-radius: 50%;
+    background-color: var(--buttonColor);
+}
+
+.glowButton:nth-child(3)::before{
     content: "";
     position: absolute;
 
@@ -201,6 +282,48 @@ h2{
     background-repeat: no-repeat;
     background-size: contain;
 
+    background-color: rgb(239, 239, 239);
+    border-radius: 50%;
+
+
     transition: 0.5s;
 }
 
+.glowButton:hover:nth-child(3)::before{
+    left: 0%;
+    background-image: url("Assets/Images/dogs/person3Icon.png");
+    transform: translateX(-50%) rotate(360deg);
+    border-radius: 50%;
+    background-color: var(--buttonColor);
+}
+
+.glowButton:nth-child(3)::after{
+    content: "";
+    position: absolute;
+
+    bottom: -15px;
+    left: 0%;
+    transform: translateX(-50%);
+
+    width: 30px;
+    height: 30px;
+
+    background-image: url("Assets/Images/dogs/house3Icon.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    background-color: rgb(239, 239, 239);
+    border-radius: 50%;
+
+
+    transition: 0.5s;
+}
+
+.glowButton:hover:nth-child(3)::after{
+    left: 100%;
+    background-image: url("Assets/Images/dogs/puppy3Icon.png");
+    transform: translateX(-50%) rotate(360deg);
+    border-radius: 50%;
+    background-color: var(--buttonColor);
+}
