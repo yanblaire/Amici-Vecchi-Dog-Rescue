@@ -13,6 +13,8 @@
     --color30: #F3B391;
     --color10: #FEFADC;
 
+    --colorbanner: #ffcaa2;
+
     --buttonColor: #FF4D6D
 }
 
@@ -28,7 +30,279 @@ main{
     display: flex;
     justify-content: center;
     align-content: center;
+    margin: 0;
+    padding: 0;
+    height: 300vh;
 }
+
+/* This is the styles for header */
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 12vh;
+    padding: 0px 2vw;
+    z-index: 1;
+    margin: 0;
+    overflow: hidden;
+    opacity: 1;
+    transition: .5s;
+    border-radius: 50px;
+    z-index: -1;
+    transition: 0.5s;
+}
+header::after{
+    content: "";
+    width: 200%;
+    height: 100%;
+    background-color: var(--colorbanner);
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    right: 0px;
+    left: 0px;
+    opacity: 0;
+    
+}
+.logo{
+    height: 100%;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+}
+.logo img{
+    width: 10vw;
+    align-self: center;
+}
+.logo h1{
+    font-size: 1.5rem;
+    color: var(--color30);
+    padding: 0;
+    margin: 0;
+    font-family: "BodoniMOda";
+}
+nav{
+    position: relative;
+    width: 40vw;
+    height: 9vh;
+    display: flex;
+    align-items: center;
+}
+nav ul{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+}
+nav ul li{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 8vw;
+    height: 9vh;
+    z-index: 1;
+}
+nav ul li a{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    position: relative;
+}
+nav ul li a .text{
+    position: relative;
+    font-size: 1rem;
+    transition: .25s;
+}
+nav ul li.active a .text{
+    font-size: 1.2rem;
+    transform: translateY(10px);
+}
+nav ul li a .icon img{
+    width: 2rem;
+}
+nav ul li a .icon{
+    position: absolute;
+    font-size: 25px;
+    top: -20px;
+    transition: .25s;
+    transform: scale(0);
+}
+nav ul li.active a .icon{
+    transform: scale(1);
+}
+.text{
+    text-align: center;
+}
+.indicator{
+    position: absolute;
+    left: 0;
+    width: 8vw;
+    height: 9vh;
+    border-radius: 20px;
+    transition: .5s;
+}
+nav ul li:nth-child(1).active ~ .indicator{
+    background-color: var(--color30);
+    box-shadow: 0 3px 20px var(--color30);
+    transform: translateX(calc(8vw * 0));
+}
+nav ul li:nth-child(2).active ~ .indicator{
+    background-color: var(--color30);
+    box-shadow: 0 3px 20px var(--color30);
+    transform: translateX(calc(8vw * 1));
+}
+nav ul li:nth-child(3).active ~ .indicator{
+    background-color: var(--color30);
+    box-shadow: 0 3px 20px var(--color30);
+    transform: translateX(calc(8vw * 2));
+}
+nav ul li:nth-child(4).active ~ .indicator{
+    background-color: var(--color30);
+    box-shadow: 0 3px 20px var(--color30);
+    transform: translateX(calc(8vw * 3));
+}
+nav ul li:nth-child(5).active ~ .indicator{
+    background-color: var(--color30);
+    box-shadow: 0 3px 20px var(--color30);
+    transform: translateX(calc(8vw * 4));
+}
+/* This is the header scroll animation styles */
+header.sticky{
+    padding: 0 50px;
+    transition: 0.5s;
+}
+header.sticky::after{
+    opacity: 1;
+    z-index: -5;
+}
+
+/* This is the Tablet responsive style */
+@media only screen and (max-width: 768px){
+    nav ul li a .text{
+        position: relative;
+        font-size: 0.8rem;
+        transition: .25s;
+    }
+    nav ul li.active a .text{
+        font-size: 1rem;
+        transform: translateY(10px);
+    }
+    nav ul li a .icon img{
+        width: 2rem;
+    }
+    .logo img{
+        width: 10vw;
+        align-self: center;
+    }
+    .logo h1{
+        font-size: 1rem;
+        color: var(--color30);
+        padding: 0;
+        margin: 0;
+        font-family: "BodoniMOda";
+    }
+}
+/* This is the Phone responsive style */
+@media only screen and (max-width: 425px){
+    header{
+        flex-direction: column;
+        height: 20vh;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 1rem;
+        border-radius: 0px;
+    }
+    .logo{
+        width: 90%;
+        justify-content: space-evenly;
+        overflow: hidden;
+    }
+    nav{
+        width: 100vw;
+        justify-content: center;
+    }
+    nav ul li{
+        width: 20vw;
+    }
+    nav ul li a .text{
+        position: relative;
+        font-size: 0.8rem;
+        transition: .25s;
+    }
+    nav ul li.active a .text{
+        font-size: 1rem;
+        transform: translateY(10px);
+    }
+    nav ul li a .icon img{
+        width: 2rem;
+    }
+    .logo img{
+        width: 20vw;
+        align-self: center;
+    }
+    .logo h1{
+        font-size: 1.5rem;
+        color: var(--color30);
+        padding: 0;
+        margin: 0;
+        font-family: "BodoniMOda";
+    }
+
+    header::after{
+        z-index: -10;
+    }
+    .indicator{
+        position: absolute;
+        left: 0;
+        width: 20vw;
+        height: 9vh;
+        border-radius: 20px;
+        transition: .5s;
+    }
+    nav ul li:nth-child(1).active ~ .indicator{
+        background-color: var(--color30);
+        box-shadow: 0 3px 20px var(--color30);
+        transform: translateX(calc(20vw * 0));
+    }
+    nav ul li:nth-child(2).active ~ .indicator{
+        background-color: var(--color30);
+        box-shadow: 0 3px 20px var(--color30);
+        transform: translateX(calc(20vw * 1));
+    }
+    nav ul li:nth-child(3).active ~ .indicator{
+        background-color: var(--color30);
+        box-shadow: 0 3px 20px var(--color30);
+        transform: translateX(calc(20vw * 2));
+    }
+    nav ul li:nth-child(4).active ~ .indicator{
+        background-color: var(--color30);
+        box-shadow: 0 3px 20px var(--color30);
+        transform: translateX(calc(20vw * 3));
+    }
+    nav ul li:nth-child(5).active ~ .indicator{
+        background-color: var(--color30);
+        box-shadow: 0 3px 20px var(--color30);
+        transform: translateX(calc(20vw * 4));
+    }
+    header.sticky{
+        padding: 0 30px;
+        transition: 0.5s;
+    }
+    header.sticky::after{
+        opacity: 1;
+        z-index: -5;
+    }
+    
+}
+
+/* This is the style for section 1 */
 
 /* This is the style for section 1 with the flipping image and description */
 .section1{
@@ -43,6 +317,69 @@ main{
     height: 50vh;
 
     background-color: var(--color30);
+}
+
+
+
+/* this is the style for the footer */
+footer{
+    height: 15vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 5rem;
+    overflow-x: hidden;
+    align-items: center;
+    background-color: white;
+}
+.footerLogo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerLogo img{
+    width: 10vw;
+}
+.credits, .copyrights{
+    font-size: 0.8rem;
+}
+.credits p{
+    padding: 0;
+    margin: 0.5rem;
+}
+.credits span{
+    text-decoration: underline;
+    color: blue;
+}
+
+@media only screen and (max-width: 768px){
+    footer{
+        padding: 0 1rem;
+    }
+    .footerLogo h2{
+        font-size: 1.3rem;
+    }
+    .credits, .copyrights{
+        font-size: 0.6rem;
+    }
+}
+@media only screen and (max-width: 425px){
+    footer{
+        padding: 0 1rem;
+        flex-direction: column;
+        min-height: 20vh;
+    }
+    .footerLogo h2{
+        font-size: 1.5rem;
+        margin-bottom: 0 0;
+    }
+    .credits, .copyrights{
+        font-size: 0.6rem;
+    }
+    .footerLogo img{
+        width: 20vw;
+    }
 }
 
 /* style for the picture section that flips when hovered over it */
