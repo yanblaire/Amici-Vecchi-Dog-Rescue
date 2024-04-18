@@ -314,12 +314,10 @@ header.sticky::after{
     gap: 1rem;
 
     width: 90vw;
-    height: 50vh;
+    height: 60vh;
 
     background-color: var(--color30);
 }
-
-
 
 /* this is the style for the footer */
 footer{
@@ -447,7 +445,12 @@ h2{
 
 /* style for paragraph and learn more button for description section */
 .paragraph, .learnMore, .descriptionButtons{
-    padding: 2rem;
+    padding: 1.3rem;
+}
+
+.paragraph, .learnMore{
+    font-size: 1.3rem;
+    font-family: "BodoniMOda";
 }
 
 .descriptionButtons{
@@ -495,7 +498,6 @@ h2{
     background-repeat: no-repeat;
     background-size: contain;
 
-    background-color: rgb(239, 239, 239);
     border-radius: 50%;
 
     transition: 0.5s;
@@ -525,7 +527,6 @@ h2{
     background-repeat: no-repeat;
     background-size: contain;
 
-    background-color: rgb(239, 239, 239);
     border-radius: 50%;
 
 
@@ -557,7 +558,6 @@ h2{
     background-repeat: no-repeat;
     background-size: contain;
 
-    background-color: rgb(239, 239, 239);
     border-radius: 50%;
 
 
@@ -588,7 +588,6 @@ h2{
     background-repeat: no-repeat;
     background-size: contain;
 
-    background-color: rgb(239, 239, 239);
     border-radius: 50%;
 
 
@@ -619,7 +618,6 @@ h2{
     background-repeat: no-repeat;
     background-size: contain;
 
-    background-color: rgb(239, 239, 239);
     border-radius: 50%;
 
 
@@ -650,7 +648,6 @@ h2{
     background-repeat: no-repeat;
     background-size: contain;
 
-    background-color: rgb(239, 239, 239);
     border-radius: 50%;
 
 
@@ -663,4 +660,188 @@ h2{
     transform: translateX(-50%) rotate(360deg);
     border-radius: 50%;
     background-color: var(--buttonColor);
+}
+
+/* style for normal laptop size for section 1 */
+@media only screen and (max-width: 1024px){
+    .paragraph, .learnMore, .descriptionButtons{
+        padding: 1rem;
+    }
+
+    .paragraph, .learnMore{
+        font-size: 1rem;
+        font-family: "BodoniMOda";
+    }
+}
+
+/* style for normal tablet size for section 1 */
+@media only screen and (max-width: 768px){
+    @keyframes  changingPictures{
+        0%{
+            background-image: url("Assets/Images/dogs/pb\ Winnie\ male\ 8yrs.jpg");
+        }
+    
+        25%{
+            background-image: url("Assets/Images/dogs/pb\ Wonder\ female\ 11yrs.jpg");
+            background-position-y: center;
+        }
+    
+        50%{
+            background-image: url("Assets/Images/dogs/Snowball\ female\ 8yrs.jpg");
+            background-position-y: center;
+        }
+
+        75%{
+            background-image: url("Assets/Images/dogs/pb\ Waffles\ female\ 10yrs.jpg");
+            background-position-y: 0rem;
+        }
+
+        100%{
+            background-image: url("Assets/Images/dogs/pb\ Winnie\ male\ 8yrs.jpg");
+        }
+    }
+
+    .section1{
+        width: 95vw;
+        height: 70vh;
+        
+        gap: 0.5rem;
+    }
+
+    .descriptionButtons{
+        justify-content: space-evenly;
+        gap: 2rem;
+        width: 92%;
+    }
+
+    .glowButton{
+        width: 4.5rem;
+        letter-spacing: 0rem;
+        font-size: 0.9rem;
+    }
+
+    
+}
+
+@media only screen and (max-width: 425px) {
+    .section1{
+        flex-direction: column-reverse;
+    
+        gap: 0.5rem;
+    
+        width: 90vw;
+        height: 90vh;
+    
+        background-color: var(--color30);
+    }
+
+    .descriptionSection{
+        width: 94%;
+        height: 47%;
+    }
+
+    .pictureSection{
+        width: 94%;
+        height: 47%;
+    }
+
+    .paragraph, .learnMore{
+        font-size: 0.9rem;
+        padding: 0.2rem;
+        margin: 0;
+    }
+
+    .descriptionButtons{
+        justify-content: space-evenly;
+        gap: 2rem;
+        width: 88%;
+    }
+
+    .glowButton{
+        width: 4.5rem;
+        letter-spacing: 0rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .section1{
+        flex-direction: column-reverse;
+    
+        gap: 0.5rem;
+    
+        width: 90vw;
+        height: 90vh;
+    
+        background-color: var(--color30);
+    }
+
+    .descriptionSection{
+        width: 94%;
+        height: 47%;
+    }
+
+    .pictureSection{
+        width: 94%;
+        height: 47%;
+    }
+
+    .paragraph, .learnMore{
+        font-size: 0.8rem;
+        padding: 0.2rem;
+        margin: 0;
+    }
+
+    .descriptionButtons{
+        justify-content: space-evenly;
+        gap: 2rem;
+        width: 88%;
+    }
+
+    .glowButton{
+        width: 4.2rem;
+        letter-spacing: 0rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .section1{
+        flex-direction: column-reverse;
+    
+        gap: 0.5rem;
+    
+        width: 90vw;
+        height: 90vh;
+    
+        background-color: var(--color30);
+    }
+
+    .descriptionSection{
+        width: 94%;
+        height: 47%;
+    }
+
+    .pictureSection{
+        width: 94%;
+        height: 47%;
+    }
+
+    .paragraph, .learnMore{
+        font-size: 0.8rem;
+        padding: 0.2rem;
+        margin: 0;
+    }
+
+    .descriptionButtons{
+        justify-content: space-evenly;
+        gap: 2rem;
+        width: 88%;
+    }
+
+    .glowButton{
+        width: 3.5rem;
+        letter-spacing: 0rem;
+        font-size: 0.6rem;
+    }
 }
