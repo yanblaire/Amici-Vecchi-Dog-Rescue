@@ -27,12 +27,13 @@ body{
 
 /* style for main content */
 main{
-    display: flex;
-    justify-content: center;
-    align-content: center;
     margin: 0;
     padding: 0;
     height: 300vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* This is the styles for header */
@@ -48,6 +49,7 @@ header{
     padding: 0px 2vw;
     z-index: 1;
     margin: 0;
+    margin-top: 1rem;
     overflow: hidden;
     opacity: 1;
     transition: .5s;
@@ -59,7 +61,7 @@ header::after{
     content: "";
     width: 200%;
     height: 100%;
-    background-color: var(--colorbanner);
+    background-color: var(--color30);
     position: absolute;
     padding: 0;
     margin: 0;
@@ -80,7 +82,7 @@ header::after{
 }
 .logo h1{
     font-size: 1.5rem;
-    color: var(--color30);
+    color: white;
     padding: 0;
     margin: 0;
     font-family: "BodoniMOda";
@@ -302,28 +304,9 @@ header.sticky::after{
     
 }
 
-/* This is the style for section 1 */
-
-/* This is the style for section 1 with the flipping image and description */
-.section1{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
-    gap: 1rem;
-
-    width: 90vw;
-    height: 50vh;
-
-    background-color: var(--color30);
-}
-
-
-
 /* this is the style for the footer */
 footer{
-    height: 15vh;
+    height: 20vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -383,6 +366,23 @@ footer{
 }
 
 /* style for the picture section that flips when hovered over it */
+/* This is the style for section 1 */
+
+/* This is the style for section 1 with the flipping image and description */
+.section1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1rem;
+
+    width: 90vw;
+    height: 50vh;
+
+    background-color: var(--color30);
+    margin-top: 10vh;
+}
 .pictureSection{
     position: relative;
 
@@ -541,3 +541,227 @@ h2{
     transition: 0.5s;
 }
 
+/* This is the design for section 3 */
+.section3{
+    width: 90vw;
+    height: 90vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: linear-gradient(to bottom, var(--color60), var(--color30));
+    margin-top: 10vh;
+}
+.section3 h2{
+    align-self: start;
+    margin-left: 5rem;
+    font-size: 3rem;
+    color: white;
+    position: relative;
+    text-shadow: 10px 10px 10px var(--color30);
+}
+.section3 h2::before{
+    position: absolute;
+    content: "";
+    width: 200%;
+    height: 5px;
+    background-color: white;
+    top: 5rem;
+}
+/* .partnersTop{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+} */
+.style1, .tails{
+    height: 30vh;
+}
+.content{
+    width: 80vw;
+    height: 30vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content .top, .content .bottom{
+    display: flex;
+    flex-direction: row;
+    height: 30vh;
+}
+.style1 img{
+    width: 10vw;
+    background-color: var(--color60);
+}
+.style2 img{
+    width: 10vw;
+    background-color: var(--color30);
+}
+.style1 h3{
+    padding: 10px;
+    background: rgba(100, 100, 100, 0.495);
+    text-align: center;
+    color: white;
+}
+.partner1, .partner2, .partner3, .partner4{
+    position: relative;
+    perspective: 1000px;
+    width: 20vw;
+    height: 30vh;
+    margin-top: 5vh;
+}
+.partner1 img, .partner2 img, .partner3 img, .partner4 img{
+    position: absolute;
+    width: 20vw;
+    height: 30vh;
+    backface-visibility: hidden;
+    transition: 3s;
+
+}
+.back1{
+    background-image: url("Assets/Images/dogs/pb\ Ariel\ female\ 12\ yrs.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.back2{
+    background-image: url("Assets/Images/dogs/pb\ Grommet\ male\ 9yrs.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.back3{
+    background-image: url("Assets/Images/dogs/pb\ Nate\ \ male\ 11yrs.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.back4{
+    background-image: url("Assets/Images/dogs//pb\ Rufi\ male\ 8yrs.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bottom .back1{
+    background-image: url("Assets/Images/dogs/pb\ Shelby\ female\ 11yrs\ .jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bottom .back2{
+    background-image: url("Assets/Images/dogs/pb\ Skip\ male\ 9yrs.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bottom .back3{
+    background-image: url("Assets/Images/dogs/pb\ Waffles\ female\ 10yrs.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bottom .back4{
+    background-image: url("Assets/Images/dogs/");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.tails{
+    width: 20vw;
+    height: 30vh;
+    border: 1px solid white;
+    backface-visibility: hidden;
+    transition: 3s;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    background-color: blue;
+}
+.style1 .tails{
+    transform: rotateY(180deg);
+}
+.style1:hover .tails{
+    transform: rotateY(0deg);
+}
+.style1:hover img{
+    transform: rotateY(-180deg);
+}
+
+/* this is the responsive design for section3 */
+@media only screen and (max-width: 768px){
+    .section3{
+        width: 90vw;
+        height: 90vh;
+
+    }
+    .section3 h3{
+        font-size: 1rem;
+    }
+    .section3 h2::before{
+        position: absolute;
+        content: "";
+        width: 150%;
+        height: 5px;
+        background-color: white;
+        top: 5rem;
+    }
+}
+@media only screen and (max-width: 425px){
+    .section3{
+        min-height: 180vh;
+        margin-top: 15vh;
+    }
+    .section3 h2{
+        font-size: 3rem;
+        margin-left: 1rem;
+    }
+    .section3 h3{
+        font-size: 1rem;
+    }
+    .section3 h2::before{
+        position: absolute;
+        content: "";
+        width: 125%;
+        height: 5px;
+        background-color: white;
+        top: 5rem;
+    }
+    .partners{
+        width: 90vw;
+        
+    }
+    .content{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    .content .top, .content .bottom{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 30vh;
+    }
+    .content .bottom{
+        position: absolute;
+        right: 25%;
+    }
+    .partner1 img, .partner2 img, .partner3 img, .partner4 img{
+        position: absolute;
+        width: 40vw;
+        height: 30vh;
+        backface-visibility: hidden;
+        transition: 3s;
+    
+    }
+    .tails{
+        width: 40vw;
+    }
+}
