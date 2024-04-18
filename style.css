@@ -304,6 +304,23 @@ header.sticky::after{
     
 }
 
+/* This is the style for section 1 */
+
+/* This is the style for section 1 with the flipping image and description */
+.section1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1rem;
+
+    width: 90vw;
+    height: 60vh;
+
+    background-color: var(--color30);
+}
+
 /* this is the style for the footer */
 footer{
     height: 20vh;
@@ -447,7 +464,12 @@ h2{
 
 /* style for paragraph and learn more button for description section */
 .paragraph, .learnMore, .descriptionButtons{
-    padding: 2rem;
+    padding: 1.3rem;
+}
+
+.paragraph, .learnMore{
+    font-size: 1.3rem;
+    font-family: "BodoniMOda";
 }
 
 .descriptionButtons{
@@ -479,7 +501,7 @@ h2{
     color: var(--color10);
 }
 
-.glowButton:nth-child(1):before{
+.glowButton:nth-child(1)::before{
     content: "";
     position: absolute;
 
@@ -495,15 +517,51 @@ h2{
     background-repeat: no-repeat;
     background-size: contain;
 
+    border-radius: 50%;
+
     transition: 0.5s;
 }
 
-.glowButton:hover:nth-child(1):before{
+.glowButton:hover:nth-child(1)::before{
     left: 0%;
+    background-image: url("Assets/Images/dogs/personIcon.png");
     transform: translateX(-50%) rotate(360deg);
+    border-radius: 50%;
+    background-color: var(--buttonColor);
 }
 
-.glowButton:nth-child(2):before{
+.glowButton:nth-child(1)::after{
+    content: "";
+    position: absolute;
+
+    bottom: -15px;
+    left: 0%;
+    transform: translateX(-50%);
+
+    width: 30px;
+    height: 30px;
+
+    background-image: url("Assets/Images/dogs/houseIcon.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    border-radius: 50%;
+
+
+
+    transition: 0.5s;
+}
+
+.glowButton:hover:nth-child(1)::after{
+    left: 100%;
+    background-image: url("Assets/Images/dogs/puppyIcon.png");
+    transform: translateX(-50%) rotate(360deg);
+    border-radius: 50%;
+    background-color: var(--buttonColor);
+}
+
+.glowButton:nth-child(2)::before{
     content: "";
     position: absolute;
 
@@ -519,10 +577,51 @@ h2{
     background-repeat: no-repeat;
     background-size: contain;
 
+    border-radius: 50%;
+
+
     transition: 0.5s;
 }
 
-.glowButton:nth-child(3):before{
+.glowButton:hover:nth-child(2)::before{
+    left: 0%;
+    background-image: url("Assets/Images/dogs/person2Icon.png");
+    transform: translateX(-50%) rotate(360deg);
+    border-radius: 50%;
+    background-color: var(--buttonColor);
+}
+
+.glowButton:nth-child(2)::after{
+    content: "";
+    position: absolute;
+
+    bottom: -15px;
+    left: 0%;
+    transform: translateX(-50%);
+
+    width: 30px;
+    height: 30px;
+
+    background-image: url("Assets/Images/dogs/house2Icon.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    border-radius: 50%;
+
+
+    transition: 0.5s;
+}
+
+.glowButton:hover:nth-child(2)::after{
+    left: 100%;
+    background-image: url("Assets/Images/dogs/puppy2Icon.png");
+    transform: translateX(-50%) rotate(360deg);
+    border-radius: 50%;
+    background-color: var(--buttonColor);
+}
+
+.glowButton:nth-child(3)::before{
     content: "";
     position: absolute;
 
@@ -538,6 +637,9 @@ h2{
     background-repeat: no-repeat;
     background-size: contain;
 
+    border-radius: 50%;
+
+
     transition: 0.5s;
 }
 
@@ -549,6 +651,13 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: center;
+.glowButton:hover:nth-child(3)::before{
+    left: 0%;
+    background-image: url("Assets/Images/dogs/person3Icon.png");
+    transform: translateX(-50%) rotate(360deg);
+    border-radius: 50%;
+    background-color: var(--buttonColor);
+}
 
     background: linear-gradient(to bottom, var(--color60), var(--color30));
     margin-top: 10vh;
@@ -763,5 +872,219 @@ h2{
     }
     .tails{
         width: 40vw;
+    }
+}
+
+.glowButton:nth-child(3)::after{
+    content: "";
+    position: absolute;
+
+    bottom: -15px;
+    left: 0%;
+    transform: translateX(-50%);
+
+    width: 30px;
+    height: 30px;
+
+    background-image: url("Assets/Images/dogs/house3Icon.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    border-radius: 50%;
+
+
+    transition: 0.5s;
+}
+
+.glowButton:hover:nth-child(3)::after{
+    left: 100%;
+    background-image: url("Assets/Images/dogs/puppy3Icon.png");
+    transform: translateX(-50%) rotate(360deg);
+    border-radius: 50%;
+    background-color: var(--buttonColor);
+}
+
+/* style for normal laptop size for section 1 */
+@media only screen and (max-width: 1024px){
+    .paragraph, .learnMore, .descriptionButtons{
+        padding: 1rem;
+    }
+
+    .paragraph, .learnMore{
+        font-size: 1rem;
+        font-family: "BodoniMOda";
+    }
+}
+
+/* style for normal tablet size for section 1 */
+@media only screen and (max-width: 768px){
+    @keyframes  changingPictures{
+        0%{
+            background-image: url("Assets/Images/dogs/pb\ Winnie\ male\ 8yrs.jpg");
+        }
+    
+        25%{
+            background-image: url("Assets/Images/dogs/pb\ Wonder\ female\ 11yrs.jpg");
+            background-position-y: center;
+        }
+    
+        50%{
+            background-image: url("Assets/Images/dogs/Snowball\ female\ 8yrs.jpg");
+            background-position-y: center;
+        }
+
+        75%{
+            background-image: url("Assets/Images/dogs/pb\ Waffles\ female\ 10yrs.jpg");
+            background-position-y: 0rem;
+        }
+
+        100%{
+            background-image: url("Assets/Images/dogs/pb\ Winnie\ male\ 8yrs.jpg");
+        }
+    }
+
+    .section1{
+        width: 95vw;
+        height: 70vh;
+        
+        gap: 0.5rem;
+    }
+
+    .descriptionButtons{
+        justify-content: space-evenly;
+        gap: 2rem;
+        width: 92%;
+    }
+
+    .glowButton{
+        width: 4.5rem;
+        letter-spacing: 0rem;
+        font-size: 0.9rem;
+    }
+
+    
+}
+
+@media only screen and (max-width: 425px) {
+    .section1{
+        flex-direction: column-reverse;
+    
+        gap: 0.5rem;
+    
+        width: 90vw;
+        height: 90vh;
+    
+        background-color: var(--color30);
+    }
+
+    .descriptionSection{
+        width: 94%;
+        height: 47%;
+    }
+
+    .pictureSection{
+        width: 94%;
+        height: 47%;
+    }
+
+    .paragraph, .learnMore{
+        font-size: 0.9rem;
+        padding: 0.2rem;
+        margin: 0;
+    }
+
+    .descriptionButtons{
+        justify-content: space-evenly;
+        gap: 2rem;
+        width: 88%;
+    }
+
+    .glowButton{
+        width: 4.5rem;
+        letter-spacing: 0rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .section1{
+        flex-direction: column-reverse;
+    
+        gap: 0.5rem;
+    
+        width: 90vw;
+        height: 90vh;
+    
+        background-color: var(--color30);
+    }
+
+    .descriptionSection{
+        width: 94%;
+        height: 47%;
+    }
+
+    .pictureSection{
+        width: 94%;
+        height: 47%;
+    }
+
+    .paragraph, .learnMore{
+        font-size: 0.8rem;
+        padding: 0.2rem;
+        margin: 0;
+    }
+
+    .descriptionButtons{
+        justify-content: space-evenly;
+        gap: 2rem;
+        width: 88%;
+    }
+
+    .glowButton{
+        width: 4.2rem;
+        letter-spacing: 0rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .section1{
+        flex-direction: column-reverse;
+    
+        gap: 0.5rem;
+    
+        width: 90vw;
+        height: 90vh;
+    
+        background-color: var(--color30);
+    }
+
+    .descriptionSection{
+        width: 94%;
+        height: 47%;
+    }
+
+    .pictureSection{
+        width: 94%;
+        height: 47%;
+    }
+
+    .paragraph, .learnMore{
+        font-size: 0.8rem;
+        padding: 0.2rem;
+        margin: 0;
+    }
+
+    .descriptionButtons{
+        justify-content: space-evenly;
+        gap: 2rem;
+        width: 88%;
+    }
+
+    .glowButton{
+        width: 3.5rem;
+        letter-spacing: 0rem;
+        font-size: 0.6rem;
     }
 }
