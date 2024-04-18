@@ -1,0 +1,13 @@
+:root{
+    --color60: red;
+    --color30: green;
+    --color10: blue;
+}
+@font-face {
+    font-family: "BodoniMOda";
+    src: url("Assets/Fonts/BodoniModa/BodoniModa-VariableFont_opsz\,wght.ttf");
+}
+@font-face {
+    font-family: "BodoniMOda-Italic";
+    src: url("Assets/Fonts/BodoniModa/BodoniModa-VariableFont_opsz\,wght.ttf");
+}
