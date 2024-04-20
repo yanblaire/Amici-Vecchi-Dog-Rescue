@@ -646,19 +646,11 @@ h2{
 /* This is the design for section 3 */
 .section3{
     width: 90vw;
-    height: 90vh;
+    height: 100vh;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-.glowButton:hover:nth-child(3)::before{
-    left: 0%;
-    background-image: url("Assets/Images/dogs/person3Icon.png");
-    transform: translateX(-50%) rotate(360deg);
-    border-radius: 50%;
-    background-color: var(--buttonColor);
-}
-
     background: linear-gradient(to bottom, var(--color60), var(--color30));
     margin-top: 10vh;
 }
@@ -772,7 +764,7 @@ h2{
     background-size: cover;
 }
 .bottom .back4{
-    background-image: url("Assets/Images/dogs/");
+    background-image: url("Assets/Images/dogs/pb\ Winnie\ male\ 8yrs.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1086,5 +1078,103 @@ h2{
         width: 3.5rem;
         letter-spacing: 0rem;
         font-size: 0.6rem;
+    }
+}
+
+
+
+.section2{
+    position: relative;
+    margin-top: 10vh;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color:#f3b39139;
+}
+.section2 img{
+    width: 5rem;
+}
+.informationalSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.firstData, .secondData, .thirdData{
+    width: 20vw;
+    display: flex;
+}
+.thirdData{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 10rem;
+}
+.thirdData img{
+    width: 10rem;
+}
+.thirdData p{
+    position: absolute;
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    top: 1.2rem;
+}
+
+@media only screen and (max-width: 768px){
+    .section2{
+        margin-top: 10vh;
+    }
+    .section2 img{
+        width: 3rem;
+    }
+    .section2 p{
+        font-size: 1rem;
+    }
+    .thirdData p{
+        position: absolute;
+        color: white;
+        font-size: 1.2rem;
+        text-align: center;
+        top: 1.2rem;
+    }
+    .thirdData img{
+        width: 5rem;
+    }
+    .thirdData p{
+        position: absolute;
+        color: white;
+        font-size: .5rem;
+        text-align: center;
+        top: 1rem;
+    }
+}
+
+@media only screen and (max-width: 425px){
+    .section2{
+        margin-top: 10vh;
+    }
+    .section2 img{
+        width: 3rem;
+    }
+    .section2 p{
+        font-size: .8rem;
+    }
+    .thirdData img{
+        width: 5rem;
+    }
+    .thirdData p{
+        position: absolute;
+        color: white;
+        font-size: .5rem;
+        text-align: center;
+        top: 1rem;
     }
 }
